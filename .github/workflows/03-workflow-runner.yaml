@@ -1,0 +1,21 @@
+name: 03-workflow Runners
+
+on:
+#   push:
+  workflow_dispatch: 
+
+jobs:
+  ubuntu-runner:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Workflow Runner on Ubuntu
+        run: echo "Workflow is Running on Ubuntu VM."
+    
+  
+  windows-runner:
+    runs-on: windows-latest
+    steps:
+      - name: Workflow Runner on Windows
+        run: echo "Workflow is Running on windows VM."
+    
+  
