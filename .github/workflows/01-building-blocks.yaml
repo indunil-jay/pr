@@ -1,0 +1,27 @@
+name: 01-building-blocks
+
+on : push
+
+jobs:
+    echo-hello: 
+         runs-on: ubuntu-latest
+         steps:
+             - name : Say hello
+               run : echo "Hello, world!"
+    echo-goodBye:
+          
+          runs-on: ubuntu-latest
+          steps:
+             - name : Failed step
+               run : | 
+                     echo "I will fail"
+                     exit 1
+             - name : Say good bye
+               run : | 
+                     echo "Good Bye!"
+                 
+  
+
+# if single step failed any subsequent steps will not be executed by default.
+# entire job consider as fail
+# and entire workflow consider as fail
