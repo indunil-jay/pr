@@ -9,13 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Workflow Runner on Ubuntu
-        run: echo "Workflow is Running on Ubuntu VM."
+        run: echo "Runner OS -> $RUNNER_OS"
     
   
   windows-runner:
     runs-on: windows-latest
     steps:
       - name: Workflow Runner on Windows
-        run: echo "Workflow is Running on windows VM."
+        shell: bash
+        run: echo "Runner OS -> $RUNNER_OS"
     
   
